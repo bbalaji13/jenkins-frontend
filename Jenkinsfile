@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     // Copy frontend build files to Nginx's HTML root
-                    sh 'sudo cp -r frontend/build/* /usr/share/nginx/html/'  // Copy files to Nginx root
+                    sh 'sudo cp -r build/* /usr/share/nginx/html/'  // Copy files to Nginx root
                     
                     // Restart Nginx to apply changes
                     sh 'sudo service nginx restart'  // Restart the Nginx service
